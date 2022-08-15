@@ -1,0 +1,139 @@
+.footer {
+    &-top {
+        padding: 7.5rem 0 7rem;
+        @include flexbox(stretch, space-between);
+    }
+    &-column {
+        width: calc(35% - 25px);
+        &:first-child {
+            width: calc(40% - 25px);
+        }
+        &:last-child {
+            width: calc(25% - 25px);
+        }
+    }
+    &-heading {
+        text-transform: uppercase;
+        font-weight: 500;
+        height: 4rem;
+        margin-bottom: 2rem;
+        display: inline-block;
+        &--logo {
+            text-transform: none;
+            font-size: 4.6rem;
+            font-weight: 600;
+            color: $gray-dark;
+        }
+    }
+    &-desc {
+        margin-bottom: 4.5rem;
+        margin-top: 2rem;
+    }
+    &-follower {
+        strong {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #eee;
+    }
+    &-social {
+        @include flexbox(center);
+        margin-bottom: 3.5rem;
+        &-icon {
+            color: $third-color;
+            margin-left: 1.5rem;
+            font-size: 2rem;
+        }
+    }
+    &-form {
+        width: 100%;
+        max-width: 28rem;
+        @include flexbox;
+        &-input {
+            padding: 1.5rem;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 0;
+            font-family: $secondary-font;
+            font-style: italic;
+            width: 100%;
+            flex-shrink: 0;
+        }
+        &-button {
+            color: white;
+            text-transform: uppercase;
+            padding: 1.5rem 3.5rem;
+            font-weight: bold;
+            border: 0;
+            background-color: $third-color;
+        }
+    }
+
+    &-blog {
+        @include flexbox(center);
+        margin-bottom: 3rem;
+    }
+    &-blog-image {
+        @include size(12rem, 8rem);
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    &-blog-info {
+        padding-left: 2rem;
+    }
+    &-blog-title {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        font-weight: 500;
+        @include textClamp(2);
+    }
+    &-images {
+        @include flexbox(stretch, flex-start, row, flex, wrap);
+        margin-left: -2px;
+    }
+    &-image {
+        margin-left: 2px;
+        width: calc(33.33% - 2px);
+        margin-bottom: 2px;
+        aspect-ratio: 1;
+        // padding-bottom: 33.33%;
+        // height: 0;
+        // position: relative;
+        img {
+            @include size(100%);
+            object-fit: cover;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+        }
+    }
+    &-bottom {
+        padding: 2.5rem;
+        text-align: center;
+        border-top: 1px solid #eee;
+        span {
+            color: $primary-color;
+        }
+    }
+    @include maxWidth(1023px) {
+        &-top {
+            display: block;
+        }
+        &-column:not(:nth-child(99)) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+    @include maxWidth(767px) {
+        &-form {
+            max-width: 22rem;
+        }
+        &-top {
+            padding-bottom: 0;
+        }
+    }
+}

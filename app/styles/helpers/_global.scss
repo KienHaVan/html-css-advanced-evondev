@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: $primary-font;
+    line-height: 1;
+    color: $title-color;
+    font-size: 1.4rem;
+}
+input,
+button {
+    outline: none;
+    line-height: 1;
+    font-family: $primary-font;
+}
+button {
+    cursor: pointer;
+}
